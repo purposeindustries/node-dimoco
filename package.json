@@ -1,0 +1,36 @@
+{
+  "name": "dimoco",
+  "version": "1.0.0",
+  "description": "Dimoco mobile payment api wrapper",
+  "main": "index.js",
+  "scripts": {
+    "test": "tap test/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/purposeindustries/node-dimoco"
+  },
+  "bugs": {
+    "url": "https://github.com/purposeindustries/node-dimoco/issues"
+  },
+  "keywords": [
+    "mobile payment",
+    "payment",
+    "dimoco"
+  ],
+  "author": "Purpose Industries <dev@purposeindustries.co> (http://purposeindustries.co)",
+  "contributors": [
+    "Robert Oroszi <ro@purposeindustries.co>"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "debug": "^1.0.4",
+    "merge": "^1.1.3",
+    "request": "^2.40.0",
+    "xml2js": "^0.4.4"
+  },
+  "devDependencies": {
+    "nock": "^0.44.2",
+    "tap": "^0.4.12"
+  }
+}

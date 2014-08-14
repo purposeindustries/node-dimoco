@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<result version="2" sync="true">
+    <action>identify</action>
+    <action_result>
+        <detail>End-user redirect required</detail>
+        <redirect>
+            <url>http://services.dimoco.at/smart/user?sph-reference=such-reference-id</url>
+        </redirect>
+        <status>3</status>
+    </action_result>
+    <request_id>such-request-id</request_id>
+    <reference>such-reference-id</reference>
+</result>
