@@ -62,11 +62,18 @@ ctor.prototype.form = function form(opts) {
 ctor.prototype.digest = function digest(options) {
   debug('digesting %j', options);
   var hash = crypto.createHmac('sha256', this.pwd);
-  var str = Object.keys(options)
-    .sort()
-    .reduce(function(str, key) {
-      return str + options[key];
-    }, '');
+  var str;
+
+  if (typeof options === 'string' ) {
+    str = options;
+  } else {
+    str = Object.keys(options)
+      .sort()
+      .reduce(function(str, key) {
+        return str + options[key];
+      }, '');
+  }
+
   hash.update(str);
   return hash.digest('hex');
 };
