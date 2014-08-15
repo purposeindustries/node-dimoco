@@ -60,6 +60,14 @@ test('digest method', function(t) {
   t.end();
 });
 
+test('digest method with string', function(t) {
+  var d = new Dimoco('pwd');
+  var txt = readFileSync(__dirname + '/fixtures/identify.xml').toString();
+  var digest = d.digest(txt);
+  t.equal(digest, '6a66d501c2a15f1deff9fe2ac9ee9585f502eca5b6c918a2c09b6e65d9c22ca4', 'digest should eql');
+  t.end();
+});
+
 test('action method', function(t) {
   var d = new Dimoco('pwd', 'http://example.org');
   nock('http://example.org')
